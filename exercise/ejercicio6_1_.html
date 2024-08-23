@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        En Arabia un sultan (Fanatico del ajadrez) quiso regalarle a su yerno un grano de trigo por cada cuadro de su tablero, la condicion era que el siguente cuadro iba a ser el doble del anterior. 
+        Calcule con un app de javascrip cuanto le regalaria en el escaque 64.
+    </h4>
+    <script>
+        var granito
+
+        granito=1
+
+        for(var x=1; x<=64; x++){
+
+            document.write("El sultan le regalara en el saque: "+x+" a su yerno: "+granito.toLocaleString()+" granos de trigo"+"<br>")
+
+            granito= granito*2 /*Se coloca dsp porq si no saldra que empieza con 2*/
+        }
+    </script>
+</body>
+</html>

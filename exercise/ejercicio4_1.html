@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body> 
+    <h4>
+        Se le pide al usuario ingresar 3 numeros de 3 cifras cada uno, el primero debe ser multiplo de 3, luego otro de 5, y el ultimomultiplo de 7.
+        Si los numeros son correctos debera calcular la multiplicacion entre ellos. Si los numeros no son correctos debera mostrar el error y cortar el programa para no continuar. 
+    </h4> 
+    <script> 
+        var num3, num5, num7
+
+        num3= parseInt(prompt("Ingrese un multiplo de 3 y de 3 cifras"))
+
+        if ((num3<100) || (num3>999)){
+            document.write("El numero ingresado no es de 3 cifras")
+            throw("") /*Para romper el prgrama*/
+        } else{
+            if (num3%3 !=0){
+                document.write("El numero ingrasado no es multiplo de 3")
+                throw("") /* Romper el programa*/
+            }
+        }
+
+        num5= parseInt(prompt("Ingrese un multiplo de 5 y de 3 cifras"))
+
+        if ((num5<100) || (num3>999)){
+            document.write("El numero ingresado no es de 3 cifras")
+            throw("") /*Para romper el prgrama*/
+        } else{
+            if (num5%3 !=0){
+                document.write("El numero ingrasado no es multiplo de 5")
+                throw("") /* Romper el programa*/
+            }
+        }
+
+        num7= parseInt(prompt("Ingrese un multiplo de 7 y de 3 cifras"))
+
+        if ((num7<100) || (num3>999)){
+            document.write("El numero ingresado no es de 3 cifras")
+            throw("") /*Para romper el prgrama*/
+        } else{
+            if (num7%3 !=0){
+                document.write("El numero ingrasado no es multiplo de 7")
+                throw("") /* Romper el programa*/
+            }
+        }
+
+        document.write("Los numeros ingresados son conrrectos: "+num3+" - "+ num5+" - "+num7+" y la multiplicacion es: "+num3*num5*num7)
+
+    </script>
+</body>
+</html>

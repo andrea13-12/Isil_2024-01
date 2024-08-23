@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio7_8</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un app que te muestre las 4 figuras diferentes 
+    </h4>
+    <script>
+        var figura_1, figura_2, figura_3, figura_4, sim1,sim2,sim3,sim4
+
+        store= ""
+        valor=0
+        while(true){
+
+            valor++
+            figura_1=parseInt(Math.random()*4+1)
+            figura_2=parseInt(Math.random()*4+1)
+            figura_3=parseInt(Math.random()*4+1)
+            figura_4=parseInt(Math.random()*4+1)
+
+            if (figura_1==1){
+                sim1="♣"
+            }else if(figura_1==2){
+                sim1="♦"
+            }else if(figura_1==3){
+                sim1="♥"
+            }else{
+                sim1="♠"
+            }
+
+            if (figura_2==1){
+                sim2="♣"
+            }else if(figura_2==2){
+                sim2="♦"
+            }else if(figura_2==3){
+                sim2="♥"
+            }else{
+                sim2="♠"
+            }
+
+            if (figura_3==1){
+                sim3="♣"
+            }else if(figura_3==2){
+                sim3="♦"
+            }else if(figura_3==3){
+                sim3="♥"
+            }else{
+                sim3="♠"
+            }
+
+            if (figura_4==1){
+                sim4="♣"
+            }else if(figura_4==2){
+                sim4="♦"
+            }else if(figura_4==3){
+                sim4="♥"
+            }else{
+                sim4="♠"
+            }
+
+            document.write("Ud obtuvo: "+valor+" juego "+sim1+sim2+sim3+sim4+"<br>")
+
+            if ((figura_1==1)&&(figura_2==2)&&(figura_3==3)&&(figura_4==4)){
+                break
+            }
+        }
+
+    </script>
+</body>
+</html>

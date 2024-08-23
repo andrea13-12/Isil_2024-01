@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio7_2</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un aplicativo que te pida el nombre de un animal, que comience con "a", el programa no dejara de pedirmelo hasta que lo hagas, al final debera de imprimir todos los animales que pusiste, incluyendo el que comience con A
+    </h4>
+    <script>
+        var name, store, key
+
+        store= "" /*Se coloca asi para que este vacio. */ /*Cuando se alamcena datos tienen que estar vacio siempre, en numero = 0, en palabras = "" */
+        key= true /*valor buleano*/
+
+        while(key){
+            name= prompt("Inserte el nombre de un animal que empiece con la letra A")
+            store= store+name+", "+"<br>"      //Aqui se graba los nombres //store="perro, ..."
+            if (name.charAt(0).toUpperCase()=='A'){
+                key=false
+            }
+        }
+
+        document.write("Los animales ingresados fueron: <br>" +store)
+    </script>
+</body>
+</html>

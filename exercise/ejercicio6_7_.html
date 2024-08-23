@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6_7</title>
+</head>
+<body>
+    <h4>
+        Se le pide un nombre al usuario y el app te desarrollara el siguente ejemplo. SI ingresas Alfredo
+        a
+        al
+        alf
+        alfre
+        alfred
+        Alfredo
+    </h4>
+    <script>
+        var nombre, cantidad
+
+        nombre= prompt("Ingrese el nombre")
+        cantidad= nombre.length
+
+        for(var x=1; x<=cantidad; x++){
+            for(var y=0; y<=x-1; y++){
+                document.write(nombre.charAt(y))
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

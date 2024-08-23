@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio8_1</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador una app que te pida tu dni y te arme una mascara de tarjeta de credito 
+        ejemplo: 
+            ingreses: 72933838
+        y te imprime:
+            **** - **** - **** - 3838
+    </h4>
+    <script>
+        var numdni, ult4di, mascara, mascaraf, mascaraa=[]
+
+        mascaraf=""
+        numdni=prompt("ingrese su numero de dni")
+        //padstar(16,"*****") --- todo ***** menos los ultimos 4 // el numero yo lo escojo 
+        // padend(16, "*") ----- el comienzo son 4 digitos y dsp *
+
+        ult4di=numdni.slice(-4)
+
+        mascara=ult4di.padStart(16,"*")
+
+        document.write(mascara+"<br>")
+        
+        mascara=mascara.slice(0,4)+"-"+mascara.slice(4,8)+"-"+mascara.slice(8,12)+"-"+mascara.slice(12,16)
+
+        document.write(mascara+"<br>")
+
+        // para sinplicifar el codigo
+        
+        for(var x=0; x<=16; x=x+4){
+            mascaraf+=mascara.slice(x,x+4)
+
+            if(x<12){
+                mascaraf+="-"
+            }
+        }
+
+        document.write(mascaraf)
+
+
+        // Ejercicio con splice
+        document.write("Metodo splice")
+        mascaraa=mascara.split("")
+
+        document.write(mascaraa)
+        mascaraa=mascara.splice(3,0,"-")
+
+        document.write(mascaraa)
+
+    </script>
+</body>
+</html>

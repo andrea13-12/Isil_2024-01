@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio8_1</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador una app que te pida 5 nombres de mujer y te los imprima de manera ordenada
+    </h4>
+    <script>
+        var nombre, mujeres=[]
+
+        for(var x=0; x<=4; x++){
+            nombre=prompt("ingrese el nombre de una mujer")
+            mujeres.push(nombre)
+        }
+
+        mujeres.sort()
+        document.write(mujeres+"<br>")
+    
+        mujeres.reverse()
+        document.write(mujeres)
+
+        
+    </script>
+</body>
+</html>

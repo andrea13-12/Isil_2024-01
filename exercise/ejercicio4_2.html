@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicio1_5</title>
+    </head>
+    <body> 
+        <h4>
+            Se le pide al desarrollador crear un programa que calcule el tiempo que demore el usuario en ingresar su nombre.
+        </h4>
+        <script> 
+            var momento1,momento2,name,time,minutos
+
+            momento1= new Date() /*Congelo la fecha hora segundo, convierto la var en fecha/hora/seg */
+            name= prompt("Ingrese su nombrë")
+
+            momento2= new Date()
+
+            time= (momento2.getTime() - momento1.getTime())/1000
+
+            if (time>60){
+                minutos= parseInt(time/60)
+                time=time-minutos*60
+            }
+
+            document.write("El tiempo que demoro en ingresar su nombre fue de: "+minutos+" minutos"+time+" segundos.")
+
+        </script>
+    </body> 
+</html>

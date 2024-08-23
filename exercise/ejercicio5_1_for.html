@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        se le pide al desarrollador crear un programa que te pida un numero multiplo de 3. Sólo tienes
+        5 intentos, sino recibiras un "estas fuera"
+    </h4>
+    <script>
+    var numero
+    
+    for(var x=1;x<=5;x=x+1){                                                     //for(var x=1;x<=5;x++)
+        numero=parseInt(prompt("Ingrese un multiplo de 3, tienes 5 oportunidades, te quedan:"+(6-x)))
+        if(numero%3==0){
+            break
+        }
+    }    
+    if(x<=5){
+        document.write("EL numero ingresado es correcto:"+numero) 
+    }else{
+        document.write("Estas fuera")
+    }
+
+    </script>
+</body>
+</html>

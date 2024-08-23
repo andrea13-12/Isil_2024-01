@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio10_1</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h4>
+        Desarrolle un app que te dibuje la letra <A> en matrix 5x5
+    </h4>
+    <script>
+        var arregloA=[1,2,3,4,5,6,10,11,12,13,14,15,16,20,21,25]
+        var arreglo5=[1,2,3,4,5,6,11,12,13,14,15,20,21,22,23,24,25]
+        var arreglocruz=[3,8,11,12,13,14,15,18,23]
+        var arregloX=[1,5,7,9,13,17,19,21,25]
+
+        for(var x=1; x<=5; x++){   //altura
+            for(var r=1; r<=5; r++){
+                for (var y=1; y<=5; y++){ //largo
+                    if (arregloA.includes((5*(x-1)+y))){
+                    //pregunto si esta en mi arreglo
+                        document.write("X")
+                    }else{
+                        document.write("&nbsp") // dos equivalen a una mayuscula
+                    }
+                }
+                document.write("&nbsp")
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>
+

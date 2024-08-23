@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio12_3</title>
+
+</head>
+<body>
+    <h4>
+        Mi amix Nils se va a LA, el dueño del hotel Ceaser Palace le pide evaluar un juego para poder ponerlo en la mesa.
+        Tiene una bolsa con bolitas de 4 colores, 10 de cada una.
+        Deberá extraer 4 bolitas de diferente color, tiene 10 intentos.
+        El juego cuesta 100 dolares, si extrae las 4 bolitas de diferente color gana 2000000
+    </h4>
+    <script>
+        var bolita,arregloi=[], intento, juego, resultado=[]
+        juego=1
+
+        while(juego<=100){
+            intento=1
+            while(intento<=10){
+                for(var x=1; x<=4; x++){
+                    bolita=parseInt(Math.random()*4+1)
+                    arregloi.push(bolita)
+                }
+
+                arregloi.sort()
+                //document.write("Intento numero: "+intento+" bolitas obtenidas: "+arregloi)
+
+                if((arregloi[0]==arregloi[1]) || (arregloi[1] == arregloi[2]) || (arregloi[2] == arregloi[3])){
+                    resultado="fallo"
+                }else{
+                    resultado="Ganô"
+                    break
+                }
+                arregloi=[]
+                intento++
+            }
+            document.write("Juego numero: "+juego+" "+resultado+"<br>")
+            juego++
+        }
+        
+    </script>
+</body>
+</html>
+

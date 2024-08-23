@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio11_1</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h4>
+        Desarrolle una app que te dibuje la letra "A" en una matriz 5x5, cuantas veces te pida el usuario 
+    </h4>
+    <script>
+        var qveces, arregloA=[1,2,3,4,5,6,10,11,12,13,14,15,16,20,21,25]
+
+        qveces= parseInt(prompt("Ingrese la cantidad de veces que quieres pintar la letra: A"))
+
+        for(var x=1; x<=5; x++){
+            for(var r=1; r<=qveces; r++){
+                for(var y=1; y<=5; y++){
+                    if (arregloA.includes(5*(x-1)+y)){ //ver si esta incluido o no 
+                        document.write("ꕥ")
+                    }else{
+                        document.write("&nbsp&nbsp")
+                    }
+                }
+                document.write("&nbsp&nbsp")
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

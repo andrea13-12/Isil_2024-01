@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio5_8</title>
+</head>
+<body>
+    <h4>
+        Dibujar un cuadrado de lado que tu elijas de puras x
+        Las posiciones de la x multiplos de 5 deberá aparecer un 5
+    </h4>
+    <script>
+    var lado
+    lado=parseInt(prompt("Ingrese el lado del cuadrado"))
+
+    for(x=1;x<=Math.pow(lado,2);x++){
+        if(x%5==0){
+            document.write("5")
+        }else{
+            document.write("x")
+        }
+       
+        if(x%lado==0){
+            document.write("<br>")
+        }
+    }
+
+    </script>
+</body>
+</html>

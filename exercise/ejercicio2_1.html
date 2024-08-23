@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador crear un programa que te pida el nombre, edad, las horas trabajadas y el valor por hora que paga la emprasa, finalmente el programa debera mandar un mnsj con el salario del trabajador.
+    </h4>
+    <script>
+        var  nombre, edad, horas, salario 
+       
+        nombre= prompt("Ingrese su nombre") /*Para que el usuario coloque el valor de la variable*/
+        edad= prompt("Ingrese su edad")
+        horas= prompt("Ingrese las horas de trabajo")
+        costo= prompt("Ingrese el costo x hora")
+        
+        salario= horas*costo
+
+        document.write("El empleado: "+nombre+ " con: "+edad+" años"+"<br>")
+        document.write("Ha trabajado: "+horas+" horas a un costo de: "+costo+" soles la hora"+"<br>")
+        document.write("Siendo su salario de:"+salario)
+
+        
+     </script>
+</body>
+</html>

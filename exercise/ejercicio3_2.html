@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body> 
+    <h4>
+        Se le pide al usuario ingresar una palabra cualquiera, los resultados:
+        1. Cantidad de letras de la palabra
+        2. Misma palabra en ,ayuscular
+        3. Misma palabra en minusculas
+        4. Misma palabra, primera letra en mayusculas y las demas en minusculas. 
+    </h4>    
+    <script>
+        var palabra,largo
+
+        palabra= prompt("Ingrese una palabra cualquiera")
+        largo= palabra.length
+
+        document.write("El largo de la palabra es: "+largo+" caracteres"+"<br>")
+        document.write("La palabra en mayuscula es: "+palabra.toUpperCase()+"<br") /*los parentesis hacen la funcion*/
+        document.write("La palabra en minuscula es: "+palabra.toLowerCase()+"<br") /*los parentesis hacen la funcion*/
+        document.write("La palabra primera es mayuscula y el resto no es: "+palabra.charAt(0).toUpperCase()+palabra.slice(1)+"<br") /* "charAt selecciona una palabra / slice parte la palabra "*/ 
+
+    </script>
+</body>
+</html>

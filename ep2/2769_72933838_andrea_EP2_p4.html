@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ep2_ejercicio_4</title>
+</head>
+<body>
+    <h5>
+        Realiza un script que te muestre el cuadrado del lado que tu elijas, pero la segunda y la penúltima línea horizontal deberán salir los valores de la posición. (10 puntos)
+        Ejemplo: 
+        Si ingresas 6        Si ingresas 7          Si ingresas 4
+        xxxxxx               xxxxxxx                Xxxx
+        78910112             89101121314            5678
+        xxxxxx               xxxxxxx                9101112
+        xxxxxx               xxxxxxx                xxxx
+        2526272829           xxxxxxx
+        Xxxxxx               363738394041
+                                xxxxxxx
+
+
+    </h5>
+    <script>
+        var number, row
+
+        number= parseInt(prompt("Ingrese un valor, por favor"))
+        row= 1
+        //. First we need to make the first line with the n` of X they gave us
+        //. then in the next row, we continue de line with de position 
+        
+        for (var x=1; x<=Math.pow(number,2); x++){
+        
+            if (row==2){
+                document.write(x)
+            } 
+            else if (row==number-1){
+                document.write(x)
+            } else {
+                document.write("x")
+            }
+
+            if (x%number== 0){
+                row= row+1
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>

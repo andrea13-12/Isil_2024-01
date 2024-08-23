@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3</title>
+</head>
+
+<body>
+    <h3>
+        Desarrollar un aplicativo que te muestre todos los resultados posibles de 5 dados hasta obtener una
+        escalera.1,2,3,4,5 (6 puntos)
+    </h3>
+    <script>
+        function rollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function checkStraight(dice) {
+            return dice.includes(1) && dice.includes(2) && dice.includes(3) && dice.includes(4) && dice.includes(5);
+        }
+
+        function simulateRolls() {
+            let rolls = [];
+            let count = 0;
+
+            while (true) {
+                rolls = []; 
+                for (let i = 0; i < 5; i++) {
+                    rolls.push(rollDice()); 
+                }
+
+                count++;
+                document.write("Intento "+count+": "+rolls.join(", ")+"<br>")
+
+                if (checkStraight(rolls)) {
+                    break;
+                }
+            }
+        }
+
+        simulateRolls();
+
+
+    </script>
+</body>
+
+</html>

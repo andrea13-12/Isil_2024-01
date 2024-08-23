@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h3>
+        Realice un script estadístico, UD. deberá apuntar los números obtenidos por un dado 100 veces, al final UD deberá mostrar cuantos veces salieron de cada número del dado. Cada vez que presiono F5 UD deberá mostrar sólo el resumen de lo que saló.
+            Ejemplo:
+            En este juego se obtuvo:
+            Número 1 del dado: 23 veces.
+            Número 2 del dado: 11 veces
+            Número 3 del dado: 19 veces
+            Número 4 del dado: 15 veces
+            Numero 5 del dado: 20 veces
+            Número 6 del dado: 12 veces
+            Total de veces evaluadas: 100 tiros de dado.
+    </h3>
+    <script>
+        function rollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function simulateDiceRolls(numRolls) {
+            const rollCounts = new Map();
+
+            for (let i = 1; i <= 6; i++) {
+                rollCounts.set(i, 0);
+            }
+
+            for (let i = 0; i < numRolls; i++) {
+                const result = rollDice();
+                rollCounts.set(result, rollCounts.get(result) + 1);
+            }
+
+            for (let i = 1; i <= 6; i++) {
+                document.write("Número "+i+" del dado: "+rollCounts.get(i)+" veces"+"<br>")
+            }
+        }
+        const rollsNumber= 100
+
+        document.write("En este juego se obtuvo:"+"<br>")
+        simulateDiceRolls(rollsNumber);
+        document.write("Total de veces evaluadas:"+rollsNumber+" tiros de dado.")
+    </script>
+</body>
+</html>

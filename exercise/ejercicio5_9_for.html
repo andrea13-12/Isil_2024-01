@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        Dibujar un cuadrado de 5 de lado (sólo el contorno)
+    </h4>
+    <script>
+    var lado
+    lado=5
+
+    for(x=1;x<=Math.pow(lado,2);x++){
+        if(x<=5){
+            document.write("x")
+        }else if(x>20){
+            document.write("x")
+        }else if(x%5==0){
+            document.write("x")
+        }else if(x%5==1){
+            document.write("x")
+        }else{
+            document.write("&nbsp&nbsp")
+        }
+        
+
+        if(x%lado==0){
+            document.write("<br>") 
+        }
+    }
+                         
+
+    </script>
+</body>
+</html>

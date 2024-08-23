@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion Permanente 1</title>
+</head>
+<body>
+    <h4> Desarrolle una aplicación que te pida 2 números de 4 cifras, el primero debe ser múltiplo de 3 y de 5 y el segundo debe ser múltiplo de 5 y de 7. Si los números son correctos, deberá ingresar los números y la suma de ellos.
+    </h4>
+    <script>
+        var num3, num5, 
+
+        num3= parseInt(prompt("Ingrese un numero de 4 cifras y multiplo de 3 y 5"))
+        if ((num3<1000) || (num3>9999)){
+            document.write("El numero ingresado no es de cuatro cifras")
+            throw("")
+        } else {
+            if ((num3%3 !=0) || (num3%5 !=0)){
+                document.write("El numero ingresado no es multiplo de 3 y 5")
+            throw("")
+            }
+        }
+
+        num5= parseInt(prompt("Ingrese un numero de 4 cifras y multiplo de 5 y 7"))
+        if ((num5<1000) || (num5>9999)){
+            document.write("El numero ingresado no es de cuatro cifras")
+            throw("")
+        } else{
+            if ((num3%5 !=0) || (num5%7 !=0)){
+                document.write("El numero ingresado no es multiplo de 5 y 7")
+                throw("")
+            }
+        }
+
+        document.write("Los numero ingresados son: "+num3+" y "+num5+ " ,la suma de estos es : " +(num3+num5))
+    </script>
+</body>
+</html>

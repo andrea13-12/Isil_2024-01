@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio7_4</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un aplicativo que te pida diferentes valors de dados
+    </h4>
+    <script>
+        //math.random da valores de= 0.0000001.....0.99999999
+        // *6 = 0.000006....5.9999999999
+        // +1 = 1.0000006....6.99999999 + parseInt() solo consideran enteros
+        var dado
+
+        dado= parseInt(Math.random()*6+1) //Math.random * el valor que desees +1
+
+        document.write("El valor del dado es: "+dado)
+        
+    </script>
+</body>
+</html>

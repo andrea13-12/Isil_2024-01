@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        se le pide al desarrollador crear un programa que te pidauna palabra
+        y el programa te lo devuelva:
+        1. Separado por guiones
+        2. De forma inversa
+    </h4>
+    <script>
+        var palabra,cantidad
+
+        palabra=prompt("ingrese la palabra")
+        cantidad=palabra.length
+
+        for(var x=cantidad-1;x>=0;x--){
+            document.write(palabra.charAt(x))
+            document.write("-")
+        }
+
+    </script>
+</body>
+</html>

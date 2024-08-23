@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion Parcial</title>
+</head>
+<body>
+    <h5>
+        Pedimos una cadena de texto que sabemos que puede contener paréntesis. Realiza un script que extraiga la cadena que se encuentra entre los paréntesis.  
+        Si existen los 2 signos el programa retornará lo que hay entre los paréntesis
+        SI sólo existe el signo “(“ te retornará desde el signo hasta el final de la cadena
+        SI sólo existe el signo “)“ te retornará desde el comienzo de la cadena hasta el signo
+        Si no hay ni un signo, retornará el mensaje “ No hay dato que extraer”
+        
+        Ejemplo: Si ingresas:
+        Qjenwencwjencjwe(oencine)oncrrwice……el resultado es oencine
+        Qjenwencwjencjwe(oencineoncrrwice……el resultado es: oencineoncrrwice
+        Qqqqqq)mwmdkqdklqmldfqmeklm el resultado es: Qqqqqq
+        Dwdqkdnjqdqdlnwjd    el resultado es: no hay dato que extraer
+        . (7 puntos)
+
+    </h5>  
+    <script>
+        var text
+
+        text = prompt("Ingrese un texto que contenga un paréntesis, por favor")
+        text_array_open = text.split('(')
+        text_array_close = text.split(')')
+        
+        document.write(text+ "...........El resultado es: ")
+        if(text_array_open.length==2 && text_array_close.length==2){
+            parantesis_array=text_array_open[1].split(')')
+            document.write(parantesis_array[0])
+
+        }else if(text_array_open.length==2){
+            document.write(text_array_open[1])
+
+        }else if (text_array_close.length==2){
+            document.write(text_array_close[0])
+
+        }else{
+            document.write(" No hay dato que extraer.")
+        }
+
+
+
+
+    </script>
+</body>
+</html>

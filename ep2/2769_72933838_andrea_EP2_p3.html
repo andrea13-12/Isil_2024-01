@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ep2_ejercicio_3</title>
+</head>
+<body>
+    <h5>
+        Realiza un script que te pida un número y esta te imprima la serie Fibonacci hasta la cantidad de números ingresados (4 puntos).
+        Ejemplo.
+        Se ingresa; 9
+        Sale:
+        1,1,2,3,5,8,13,21,34…
+    </h5>
+    <script>
+        var number, fibonacci, current_number, prev_number
+
+        number= parseInt(prompt("Ingrese un numero, por favor"))
+        current_number= 1
+        prev_number= 0
+        //.1 insert the nomber
+        //.2 make the loop with the number
+        //. fibonacci = first number + second number
+        //.3 make fibonacci
+
+        document.write("Se ingresa: "+number+"<br>")
+        document.write("Sale: <br>")
+
+        document.write(current_number)
+        document.write(",")
+
+        for(var x=0; x<number-1; x++){
+            fibonacci= prev_number+current_number
+            document.write(fibonacci)
+
+            if(x<number-2){
+                document.write(", ")
+            }
+            prev_number=current_number            
+            current_number=fibonacci
+        }
+        document.write("...")
+    </script>
+</body>
+</html>

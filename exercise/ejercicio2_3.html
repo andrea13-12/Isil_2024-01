@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador crear un programa que te pida 2 numeros y que te imprima el mayor de ellos; si es igual, debe mostrar el mnsj "Los numeros son iguales".
+    </h4>
+    <script>
+        var num1, num2
+
+        num1= parseInt(prompt("Ingrese el primer numero"))
+        num2= parseInt(prompt("Ingrese el segundo numero"))
+
+        if(num1>num2){
+            document.write("El numero mayor es: "+num1+"<br>")
+        }
+
+        if(num1<num2){
+            document.write("El numero mayor es "+num2+" <br>")
+        }
+
+        if(num1==num2){ /*Se coloca doble "=" para indicar que los numeros son iguales */
+            document.write("Los numeros son iguales a: "+num1+"<br>")
+        }
+     </script>
+</body>
+</html>

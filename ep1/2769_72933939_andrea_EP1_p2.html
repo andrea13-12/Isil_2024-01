@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion Permanente 1</title>
+</head>
+<body>
+    <h4> Se le pide al desarrollador crear una aplicación que te pida el precio de dos televisores. El aplicativo informará que comprará 3 unidades del televisor con más bajo precio y 2 unidades del televisor con el más alto precio. Mostrar el total a pagar por el cliente.
+    </h4>
+    <script>
+        var tv1, tv2, total
+
+        tv1= parseFloat(prompt("Ingrese el valor del primer televisor, por favor."))
+        tv2= parseFloat(prompt("Ingrese el valor del segundo televisor, por favor."))
+
+        if (tv1>=tv2){
+            total= (tv1*2)+(tv2*3)
+
+            document.write("El usuario tendrá que comprar: 2*"+tv1 +" y 3*"+ tv2+ " = " +total)
+        } else{
+            total= (tv1*3)+(tv2*2)
+
+            document.write("El usuario tendrá que comprar: 3*"+tv1 +" y 2*"+ tv2+ " = " +total)
+        } 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio10_1</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un app que te pida 10 numeros cualquiera debes volver a escribir los numeros ingresados en una primera fila, una segunda fila con los numeros al cuadrado, una tercera con los numeros multiplicados por 10 una cuarta fila los numeros pares de los que ingresaste y una quinta fila los numeros primos de los que ingresaste.
+    </h4>
+    <script>
+        var numero, arreglo=[]
+
+        for(var x=1; x<=10; x++){
+            numero = parseInt(prompt("Ingrese un numero del arreglo"))
+            arreglo.push(numero)
+
+        }
+
+        document.write(arreglo+"<br>")
+        document.write(arreglo.map(cuadrado)+"<br>")
+        document.write(arreglo.map(x10)+"<br>")
+        document.write(arreglo.filter(par)+"<br>")
+
+
+        //MAP == Cambia los valores de acuerdo la funcion dada
+        //Filter == Selecciona los valores 
+        function cuadrado(num){
+            return Math.pow(num,2) //num*num
+        }
+
+        function x10(num){
+            return num*10
+        }
+
+        function par(valor){
+            if (valor%2==0){
+                return valor
+            }
+        }
+
+        function primo(valor){
+            let primo=true
+            for(var x=valor-1; x>=2; x--){
+                if(valor%x==0){
+                    primos==false
+                    break
+                }
+            }
+            if(primo==true){
+                return valor
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body> 
+    <h4>
+        Se le pide al usuario ingresar un numero de 3 cifras y el programa debera mostrar la suma de las 3.
+    </h4>    
+    <script>
+        var num1,suma, cif1, cif2, cif3
+
+        num1= prompt("Ingrese el numero de 3 cifras")
+        cif1= parseInt(num1.charAt(0))
+        cif2= parseInt(num1.charAt(1))
+        cif3= parseInt(num1.charAt(2))
+        suma= cif1+cif2+cif3
+
+        document.write("El numero ingresado es: "+num1+" y la suma de las cifras es: "+suma+"<br>")
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ep2_ejercicio_2</title>
+</head>
+<body>
+    <h5>
+        Realiza un script que te pida una cadena de texto y al salir te saque cada letra separada por guión. (4 puntos)
+        Se ingresa:
+        Excelente
+        Saldrá:
+        E-x-c-e-l-e-n-t-e 
+
+    </h5>
+    <script>
+        var text, character
+
+        text= prompt("Inserte el texto por favor")
+
+        //1. First scan the text 
+        //2. Then bring each letter 
+        // 3. separete the letters 
+        //4. put a -
+        //5. document.write("Excelente")
+        //6. show the text with - 
+        document.write("Se ingresa: "+text+"<br>")
+        document.write("Saldra: <br>")
+        for (var x=0; x<=text.length-1;x++){
+            character= text.charAt(x)
+            document.write(character.toString())
+            if (x<text.length-1){
+                document.write("-")
+            }
+        }
+    </script>
+</body>
+</html>

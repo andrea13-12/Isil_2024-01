@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion Permanente 1</title>
+</head>
+<body>
+    <h4> Desarrolle una aplicación que te pida la edad de un empleado, la categoría,  el nombre, el área en la que trabaja, la profesión, hijos  y las horas trabajadas en el último mes.
+        El hombre gana 40 x hora de trabajo si es categoría A y 50 si es categoría B
+        a.  Si el empleado trabajó más de 160 horas al mes gana un bono de 200
+        b.  Si el empleado tiene más de 40 años gana un bono de 300
+        c.  Si el empleado trabaja en el área de Sistemas gana un bono de 500 las demás áreas ganan 100
+        d.  Si el empleado es ingeniero gana un bono de 500, las demás profesiones ganan 200
+        e.  Si el empleado tiene hijos gana 500 soles más por hijo.
+        </h4>
+    <script>
+        var age,category, name, area, profession, children, hours, salario, bono1, bono2, bono3, bono4, bono5
+        
+        name= prompt("¿Cómo se llama?, ingrese su nombre por favor")
+        age= parseInt(prompt("¿Qué edad tiene?, ahora ingrese su edad, por favor"))
+        category= prompt("¿Por favor, indique que categoría es: A o B").toUpperCase()
+        area= prompt("¿En que área trabaja?, ingresela por favor").toUpperCase()
+        profession= prompt("¿Cuál es su profesión?, ingresela, por favor")
+        children= parseInt(prompt("¿Usted tiene hijos?, si es así ingrese la cantidad, en caso contrario coloque 0"))
+        hours= parseInt(prompt("¿Cuantas horas trabajó en el último mes?. ingrese la cantidad"))
+        
+        if (category == "A"){
+            salario= hours*40 
+            document.write("El empleado "+name+", trabajó "+hours+" de categoría "+category+"<br>")
+
+        } else{
+            salario = hours*50
+            document.write("El empleado "+name+", trabajó "+hours+" de categoría "+category+"<br>")
+
+        }
+
+        if (hours>=160){
+            bono1= salario+200
+            document.write("El sueldo base: "+salario+" +200 = "+bono1+"<br>")
+        } else{
+            bono1= salario+0
+            document.write("El sueldo base: "+bono1+"<br>")
+
+        }
+
+        if (age>=40) {
+            bono2 = bono1 + 300;
+            document.write("El empleado tiene " + age + " años = " + bono1 + " + 300 = " + bono2 + "<br>");
+        } else {
+            bono2 = bono1;
+            document.write("El empleado tiene " + age + " años = " + bono2 + "<br>");
+        }
+
+        if (area == "SISTEMAS") {
+            bono3 = bono2 + 500;
+            document.write("El empleado trabaja en el área de " + area + ": " + bono2 + " + 500 = " + bono3 + "<br>");
+        } else {
+            bono3 = bono2 + 100;
+            document.write("El empleado trabaja en el área de " + area + ": " + bono2 + " + 100 = " + bono3 + "<br>");
+        }
+
+        if (profession == "INGENIERO") {
+            bono4 = bono3 + 500;
+            document.write("El empleado es " + profession + ": " + bono3 + " + 500 =" + bono4 + "<br>");
+        } else {
+            bono4 = bono3 + 200;
+            document.write("El empleado es " + profession + ": " + bono3 + " + 200 =" + bono4 + "<br>");
+        }
+
+        if (children>=1) {
+            bono5 = bono4 + children * 500;
+            document.write("El empleado tiene " + children + " hijos: " + bono4 + " + " + children + " * 500 = " + bono5);
+        } else {
+            bono5 = bono4;
+            document.write("El empleado no tiene hijos, por lo cual no recibe bono alguno. Se queda con el mismo sueldo, el cual es de: " + bono5);
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador crear una plantilla de sueldos, se le debe preguntar al usuarios el nombre, edad, area de trabajos y horas trabajadas.
+        Si el usuario es de sistemas gana 300 x hora, diseño grafico gana 120, y si es de animacion digital gana 200.
+        SI el empleado tiene 50 años gana bono de 500
+        
+        Construya la plantilla
+    </h4>
+    <script>
+        var nombre, edad, area, horas, salario,costo, darea
+
+        nombre= prompt("Ingrese su nombre").toUpperCase()
+        edad= parseInt(prompt("Ingrese su edad"))
+        area= prompt("Ingrese su area de trabajo: (s)istemas, (d)iseño, (a)nimacion")
+        horas= parseInt(prompt("Ingrese las horas"))
+
+        if (area== "s"){
+            darea= "Sistemas"
+            costo= 300
+            salario= horas*300
+        }
+
+        if(area=="a"){
+            darea= "Animacion"
+            costo= 200
+            salario= horas*200
+        }
+
+        if(area=="d"){
+            darea="Diseñador"
+            costo= 120
+            salario= horas*120
+        }
+
+        if (edad>=50){
+            salario+=500 /* Otra forma => salario= salario+500*/
+        }
+
+        document.write("El empleado: "+nombre+"  con: "+edad+" años"+"<br>")
+        document.write("Ha trabajado: "+horas+ " a un costo de "+costo+" soles la hora"+"<br>")
+        document.write("El empleado es de la area de: "+darea+"<br>")
+        document.write("Siendo su salario de: "+salario)
+
+    </script>
+</body>
+</html>

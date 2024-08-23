@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ep2_ejercicio_1</title>
+</head>
+<body>
+    <h5>
+        Realiza un script que te pida una cadena de texto, y que solo te imprima como salida las vocales que hay en el, a manera de resumen. (2 puntos)
+            Ejemplo:
+            Se ingresa: “La historia de mi familia es larga y extensa”
+            a  7
+            e..4
+            i..5
+            o..1
+            u..0
+    </h5>
+    <script>
+        var text, character, counter_a, counter_e, counter_i, counter_o, counter_u 
+
+        text= prompt("Ingrese un texto, por favor").toLowerCase()
+        counter_a = 0
+        counter_e = 0
+        counter_i = 0
+        counter_o = 0
+        counter_u = 0
+
+        //1. iterate with for loop over each charcacter 
+        //2. with Chartat find the character at the index possition 
+        //3. with if find the vowels (each on "a e i o u")
+        //4. if the condition is true, add one to the vowel counter 
+        
+        document.write("Se  ingresa: "+text+"<br>")
+        
+        for ( var x=0; x<=text.length-1; x++){
+            character= text.charAt(x)
+            if (character == "a"){
+                counter_a = counter_a+1
+            }
+            if (character == "e"){
+                counter_e = counter_e+1
+            }
+            if (character == "i"){
+                counter_i = counter_i+1
+            }
+            if (character == "o"){
+                counter_o = counter_o+1
+            }
+            if (character == "u"){
+                counter_u = counter_u+1
+            }
+        }
+        
+        document.write("a.. "+counter_a+"<br>")
+        document.write("e.. "+counter_e+"<br>")
+        document.write("i.. "+counter_i+"<br>")
+        document.write("o.. "+counter_o+"<br>")
+        document.write("u.. "+counter_u+"<br>")
+    </script>
+</body>
+</html>

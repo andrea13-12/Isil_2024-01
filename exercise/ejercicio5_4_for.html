@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        se le pide al desarrollador crear un programa que te esriba los numeros del numero que elijas hasta el 1
+        los numeros pares deberas ponerlo con un tamaño mas grande
+    </h4>
+    <script>
+        var numero
+
+        numero=parseInt(prompt("ingrese el numero elegido"))
+    
+        for(var x=numero;x>=1;x--){
+            if(x%2==0){
+                document.write(x.toString().bold().fontsize(10).fontcolor("blue"))
+                document.write(",")
+            }else{
+                document.write(x+", ")
+            }
+            
+        }
+    
+
+    </script>
+</body>
+</html>

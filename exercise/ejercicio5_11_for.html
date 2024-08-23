@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        Pedir un nombre y dibujarlo en columna, a la inversa formando un triangulo
+        "Alfredo"
+        alfredoderfla
+         lfredoderfl
+          fredoderf
+           redoder
+            edode
+             dod
+              o
+    </h4>
+    <script>
+       //* var nombre, cantidad, nombre_reverso, nombre_n, nombre_reverso_n, espacio
+
+       /*nombre= prompt("Escriba su nombre")
+        nombre_reverso = nombre.split('').reverse().join('').substring(1, nombre.length)
+        cantidad= nombre.length
+        espacio = ""
+        for(var i=0; i<=cantidad; i++ ){
+            espacio = " ".repeat(i)
+            nombre_n = espacio + nombre.substring(0 + i, nombre.length)
+            nombre_reverso_n = nombre_reverso.substring(0, nombre_reverso.length - i)
+            document.write(nombre_n) + document.write(nombre_reverso_n) + document.write("<br>")
+        }*/
+
+        var nombre, cantidad
+        nombre=prompt("ingresee el nombre")
+        cantidad=nombre.length
+
+        for(var x=1; x<=cantidad; x++){
+            for(var e=1;e<=x;e++){
+                document.write("&nbsp&nbsp")
+            }
+            for( var y=x-1; y<=cantidad-1; y++){
+                document.write(nombre.charAt(y))
+            }
+            for(var r=cantidad-1; r>=x-1; r--){
+                document.write(nombre.charAt(r))
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

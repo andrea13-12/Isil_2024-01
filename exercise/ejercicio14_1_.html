@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio12_3</title>
+
+</head>
+<body>
+    <h4>
+        Se tiene una bolsa de 40 bolitas, 10 de cada colores
+        Desarrollen un aplicativo que te extraiga 4 bolitas del mismo colores, usted debe mostrar todos los resultados anteriores 
+        (ejercico con reposicion)
+    </h4>
+    <script>
+        var nbolita, arreglop=[], arreglon=[],nbol,intentos
+
+        nbol=0
+        key=true
+        intentos=0
+
+        while(key){
+            while(nbol<4){
+                nbolita=parseInt(Math.random()*40+1)
+                if(arreglon.includes(nbolita)){
+                    continue
+                }else{
+                    arreglon.push(nbolita)
+                    arreglop.push(pintarbolita(nbolita))
+                    nbol++
+                }
+            }
+
+            nbol=0
+            document.write("Intentos: "+intentos+" "+arreglop+"<br>")
+
+            if((arreglop[0]==arreglop[1])&&
+            (arreglop[1]==arreglop[2])&&
+            (arreglop[2]==arreglop[3])){
+                key=false
+            }
+
+
+            arreglon=[]
+            arreglop=[]
+            intentos++
+        }
+            
+
+        function pintarbolita(num){
+            if (num<=10){
+                return "☻".fontcolor("yellow")
+            }else if ((num>10)&&(num<=20)){
+                return "☻".fontcolor("red")
+            }else if ((num>20)&&(num<=30)){
+                return "☻".fontcolor("blue")
+            }else{
+                return "☻".fontcolor("green")
+            }
+        }
+    </script>
+</body>
+</html>
+

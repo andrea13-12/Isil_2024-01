@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio9_2</title>
+</head>
+<body>
+    <h4>
+        arrey 
+    </h4>
+    <script>
+
+        var numero, numeros
+
+        numero=12
+        numeros=[5,3,10,24,45,6,17]
+
+        document.write(numero+"<br>")
+        document.write(numeros+"<br>")
+        document.write(numeros[0]+"<br>")
+
+        //insertar datos//
+        document.write("Insertar datos en arrey <br>")
+
+        numeros[7]=1000
+        document.write(numeros+"<br>")
+
+        numeros[15]=2000
+        document.write(numeros+"<br>")
+
+        numeros.push(3000) // te lo coloca al final 
+        document.write(numeros+"<br>")
+
+        numeros.unshif(4000) // colocarlo al inicio
+        document.write(numeros+"<br>")
+
+        numeros.pop() // elimina el ultimo valor del arreglo
+        document.write(numeros+"<br>")
+
+        numeros.shift() //elimina el primero
+        document.write(numeros+"<br>")
+
+        numeros.sort()
+        document.write(numeros+"<br>")
+
+
+    </script>
+</body>
+</html>

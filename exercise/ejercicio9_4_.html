@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio9_4</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador una app que te pida nombres de hombres, y solo dejara de pedirtelos cuando escribas la palabra fin.
+
+        debes de imprimir los nombres en mayuscula y ordenados
+    </h4>
+    <script>
+        var nombre, hombres=[], nombresh
+
+        while(nombre!="FIN"){
+
+            hombres.push(nombre) // se coloca al inicio, pq si no sale la ,
+            //insertar el nombre en el array
+            nombre=prompt("Ingrese nombres de hombres").toUpperCase()
+
+        }
+
+        hombres.sort()
+        nombresh=hombres.join(",") // lo convierte en string
+        nombresh=nombresh.slice(0,nombresh.length-1) // ahi quitas la coma
+        document.write(nombresh)
+
+    </script>
+</body>
+</html>

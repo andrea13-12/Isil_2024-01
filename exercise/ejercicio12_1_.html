@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio12_1</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h4>
+        Hacer el reloj
+    </h4>
+    <script>
+        var  arreglo0=[1,2,3,4,5,6,10,11,15,16,20,21,22,23,24,25],
+        arreglo1=[3,8,13,18,23],
+        arreglo2=[1,2,3,4,5,10,11,12,13,14,15,16,21,22,23,24,25],
+        arreglo3=[1,2,3,4,5,10,11,12,13,14,15,20,21,22,23,24,25],
+        arreglo4=[1,5,6,10,11,12,13,14,15,20,25],
+        arreglo5=[1,2,3,4,5,6,11,12,13,14,15,20,21,22,23,24,25],
+        arreglo6=[1,2,3,4,5,6,11,12,13,14,15,16,20,21,22,23,24,25],
+        arreglo7=[1,2,3,4,5,9,13,17,21],
+        arreglo8=[1,2,3,4,5,6,10,11,12,13,14,15,16,20,21,22,23,24,25],
+        arreglo9=[1,2,3,4,5,6,10,11,12,13,14,15,20,21,22,23,24,25],
+        arreglop=[7,17],
+        arregloc=[],
+        cantidad,
+        hora,minuto,segundo
+
+        let today=new Date()
+
+        hora= today.getHours().toString().padStart(2,"0") //padstart [solo funciona con string] llenara de 0 
+        minuto= today.getMinutes().toString().padStart(2,"0")
+        segundo= today.getSeconds().toString().padStart(2,"0")
+        fecha= hora+":"+minuto+":"+segundo
+
+        cantidad= fecha.length
+
+        for(var x=1;x<=5; x++){
+            for(var r=0;r<=cantidad-1; r++){ // numero de letras que ingresa el usuario
+                arregloc=arreglo(fecha[r])
+                for(var y=1;y<=5; y++){
+                    if (arregloc.includes(5*(x-1)+y)){ //ver si esta incluido o no 
+                        document.write("x")
+                    }else{
+                        document.write("&nbsp")
+                    }
+                }
+                document.write("&nbsp&nbsp")
+            }
+            document.write("<br>")
+        }
+
+        function arreglo(num){
+            var arreglofinal
+            switch(num){
+            case "0":
+                arreglofinal=arreglo0
+                break;
+            case "1":
+                arreglofinal=arreglo1
+                break;
+            case "2":
+                arreglofinal=arreglo2
+                break;
+            case "3":
+                arreglofinal=arreglo3
+                break;
+            case "4":
+                arreglofinal=arreglo4
+                break;
+            case "5":
+                arreglofinal=arreglo5
+                break;
+            case "6":
+                arreglofinal=arreglo6
+                break;
+            case "7":
+                arreglofinal=arreglo7
+            case "8":
+                arreglofinal=arreglo8
+                break;
+            case "9":
+                arreglofinal=arreglo9
+                break;
+            default:
+                arreglofinal=arreglop
+            }
+            return arreglofinal
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
+

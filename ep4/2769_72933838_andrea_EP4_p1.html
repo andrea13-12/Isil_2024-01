@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+</head>
+
+<body>
+    <h3>
+        Realizar un script que te muestre todos los resultados posibles para obtener 6 bolas rojas o 6 bolas azules, de
+        una bolsa de 13 bolas (6 rojas y 6 azules y una gris) La gris es comodín, servirá para cubrir cualquier
+        color.(es con reposición, significa que si no obtienes las 6 bolas del mismo color o 5 y un comodín, tendrás que
+        arrojar de nuevo las bolas a la canasta y comenzar a jugar de nuevo).(7 puntos)
+
+        Ejemplo; Ganas si obtienes: 6 rojas o 6 azules o 5 rojas y 1 gris o 5 azules y una gris.
+    </h3>
+    <script>
+        var arreglop = [];
+
+        while (true) {
+            var rojas = 0; 
+            var azules = 0; 
+            var grises = 0; 
+
+            for (var i = 0; i < 13; i++) {
+                var bola = parseInt(Math.random() * 13);
+
+                if (bola < 6) {
+                    rojas++;
+                } else if (bola < 12) {
+                    azules++;
+                } else {
+                    grises++;
+                }
+
+                arreglop.push(pintarbolita(bola));
+            }
+
+            document.write("Obtuviste: "  + arreglop + "<br>");
+
+            if (rojas >= 6 || azules >= 6 || (rojas >= 5 && grises >= 1) || (azules >= 5 && grises >= 1)) {
+                break; 
+            }
+        }
+
+        function pintarbolita(num) {
+            if (num < 6) {
+                return "☻".fontcolor("red");
+            } else if (num < 12) {
+                return "☻".fontcolor("blue");
+            } else {
+                return "☻".fontcolor("gray");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2_4</title>
+</head>
+<body>
+    <h4>
+        En Arabia tenemos la siguente secuencia: 
+        1       1       2       4       6       14
+        1       2       3       6       9       21
+        1       3       4       8       12      28
+        1       4       5       10      15      35
+        ...
+
+        Dependiendo de la cantidad de series que se le pide al usuario (en este caso le pidio 4)
+    </h4>
+    <script>
+        var filas
+        numero=1
+        filas=parseInt(prompt("Ingrese el numero de filas"))
+
+        for(var x=1;x<=filas;x++){
+
+            document.write(numero)
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/
+            document.write(x)
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/
+            document.write(x+numero)
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/
+            document.write((x+numero)*2)  
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/
+            document.write((x+numero)*3)   
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/                
+            document.write((x+numero)*7)
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp") /*es para colocar los espacios*/                
+
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

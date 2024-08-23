@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+</head>
+
+<body>
+    <h3>
+        Realizar un script que te diga si un numero ingresado es capicúa o no. (6 puntos)
+        Ejemplo:
+        Si ingresas 12344321……… el numero es capicúa
+        3345433 ………… el numerpo es capicúa.
+        123 ………… el numero no es capicua
+
+    </h3>
+    <script>
+        var numero, numstrg, reverse
+
+        numero = parseInt(prompt("Ingrese un numero por favor"))
+
+        var numero = parseInt(prompt("Ingrese un número por favor"));
+
+        function esCapicua(numero) {
+            var numStr = numero.toString();
+            var numReverso = numStr.split('').reverse().join('');
+            return numStr === numReverso;
+        }
+
+        function verificarCapicua(numero) {
+            if (esCapicua(numero)) {
+                return numero + " es capicúa";
+            } else {
+                return numero + " no es capicúa";
+            }
+        }
+
+        var resultado = verificarCapicua(numero);
+
+        document.write(resultado);
+
+    </script>
+</body>
+
+</html>

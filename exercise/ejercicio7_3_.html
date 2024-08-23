@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio7_3</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un aplicativo que te pida importes, el programa terminara cuand la suma de ellos sea igual o mayor que 1000. El programa deberá mostrar todo los valores ingresados
+    </h4>
+    <script>
+        var numbers, store, suma
+
+        suma=0
+        store= ""
+
+        while(true){ //Es lo mismo que tener la variable key= true
+
+            numbers=parseInt(prompt("Inserte un valor"))
+            suma= suma+numbers
+            store=store+numbers
+
+            if (suma>1000){
+                break //Rompe el while
+            } else{ //para que no salga la coma en todo
+                store=store+","+"<br>"
+            }
+            }
+        document.write("Los numeros ingresados fueron: <br>"+store+"<br>")
+        document.write("La suma total fue de: "+suma)
+
+    </script>
+</body>
+</html>

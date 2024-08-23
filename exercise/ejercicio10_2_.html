@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio10_1</title>
+</head>
+<body>
+    <h4>
+        Desarrolle un app que te pida el numero primo que este en la posicion elegida por el usuario.
+    </h4>
+    <script>
+
+        var muestra, contador, position
+
+        muestra=2
+        contador=0
+        position= prompt("Ingrese la posicion del numero primo deseado")
+
+        while(contador<position){
+            if (primo(muestra)){
+            contador++
+            }
+            
+            if (contador==position){
+                break
+
+            } else{
+                muestra++
+            }
+        }
+
+        document.write("El numero buscado es: "+muestra)
+
+        function primo(valor){
+            let primo=true
+            for(var x=valor-1; x>=2; x--){
+                if (valor%x==0){
+                    primo=false
+                    break
+                }
+            }
+            return primo
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion PArcial</title>
+</head>
+<body>
+    <h5>
+        Realiza un script que pida una cadena de texto y la devuelva en forma de pirámide con su gemela invertida. (7 puntos)
+            Ejemplo:
+            Si ingresa: Alfredo
+            Sale
+            A            A
+            AL          LA
+            ALF        FLA
+            ALFR      RFLA
+            ALFRE    ERFLA
+            ALFRED  DERFLA
+            ALFREDOODERFLA
+    </h5>  
+    <script>
+        var nombre, cantidad
+
+        nombre= prompt("Ingrese un texto").toUpperCase()
+        cantidad= nombre.length
+
+        for(var x=1; x<=cantidad; x++){
+            for(var y=0; y<=x-1; y++){
+                document.write(nombre.charAt(y))
+            }
+            for(var e=1;e<=cantidad-x;e++){
+                document.write("&nbsp&nbsp&nbsp&nbsp&nbsp")
+            }
+            for(var y=x-1; y>=0; y--){
+                document.write(nombre.charAt(y))
+            }
+            document.write("<br>")
+        }
+    
+    </script>
+</body>
+</html>

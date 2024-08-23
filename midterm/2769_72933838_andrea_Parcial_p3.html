@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion Parcial</title>
+</head>
+<body>
+    <h5>
+        Realiza un script al cual le ingreses un número y te muestre la serie el cuadrado del numero y el “cuadrado perfecto de pares”. Si ingresas 8 te mostrará: (6 puntos)
+            1	     	1		1
+            2	     	4		4
+            3	     	9		16
+            4	     	16		36
+            5	     	25		64
+            6		    36		100
+            7	    	49      144
+            8          	64      196
+
+    </h5>  
+    <script>
+        var number
+
+        number= parseInt(prompt("Ingrese un numero, por favor"))
+        
+
+        for (var x=1; x<=number;x++){
+            document.write(x)
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp")
+            document.write(x*x)
+            if(x!=1){
+                e=(x-1)*2
+            }else{
+                e=1
+            }
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp")
+            document.write(e*e+"<br>")
+            document.write("<br>")
+
+        }
+
+    </script>
+</body>
+</html>

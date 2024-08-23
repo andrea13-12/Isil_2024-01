@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+<h3>
+    Realice un script que le pida 10 numeros, ud deberá imprimir los mismos en una primera lista, y en una segunda lista deberá imprimir el valor “Y”  de está función:
+			
+					Y=x*x+2*x+20   (siendo X el valor ingresado en la primera línea)
+
+</h3>
+<script>
+    function calculateY(x) {
+        return x * x + 2 * x + 20;
+    }
+
+    var numbers = [];
+
+    for (var i = 1; i <= 10; i++) {
+        var input = prompt("Ingrese el número "+i+": ");
+        var num = parseFloat(input);
+        if (!isNaN(num)) {
+            numbers.push(num);
+        } else {
+            alert("Valor incorrecto, por favor ingrese un número válido");
+            i--;
+        }
+    }
+    numbers.forEach((num) => {
+        document.write("Número: "+num+"<br>")
+    })
+    
+    document.write("<br>")
+
+    numbers.forEach((num) => {
+        document.write("Y("+num+"):  "+calculateY(num))
+        document.write("<br>")
+    })
+</script>
+</body>
+</html> 

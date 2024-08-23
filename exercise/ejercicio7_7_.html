@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio7_6</title>
+</head>
+<body>
+    <h4>
+        Se le pide al usuario extraer 5 cartas de una bolsa donde se encuentren las 13 cartas de cada figura. El juego termina cuando el usuario ha extraido 4 figuras iguales. Si el usuario intenta menos de 10 veces gana 1000 dolares.
+        Contruye la probabilidad del juego. 
+    </h4>
+    <script>
+        //investigar array 
+        // cada que salga un numero con el simbolo, ya no debe salir en el juego 
+        // ejem 6 corazon, 7 corazon, 12 corazon 
+
+        iteracion=0
+
+        while(true){
+            iteracion++ //contador
+            const cartas = [
+                {
+                contador: 0,
+                mazo: "♥",
+                },
+                {
+                contador: 0,
+                mazo: "♠",
+                },
+                {
+                contador: 0,
+                mazo: "♣",
+                },
+                {
+                contador: 0,
+                mazo: "♦",
+                }
+            ]
+            
+            // for que itere(loop del for) 5 (cartas que saco) 
+            // en cada iteracion escojo aleatoreamente parseInt(Math.random()*4
+            // extraer el mazo del array segun el numero aleatorio 
+            // extraigo el numero del objeto {} del mazo
+             //if 4 mazos == 
+            // >10 intentos ++
+
+            document.write(iteracion+". Cartas: ")
+            for(var x=0; x<5; x++){
+                random_carta = parseInt(Math.random()*cartas.length)
+                random_numero = parseInt(Math.random()*13+1)
+                random_mazo = cartas[random_carta]
+                random_mazo.contador += 1 // contador+1
+                document.write(random_numero+random_mazo.mazo+" - ")
+            }
+
+
+            //if(cartas[0].contador==4 && cartas[1].contador==4 && cartas[2].contador==4 && cartas[3].contador==4)
+
+            gameover=false
+
+            for( let i=0; i<cartas.length; i++){
+                if(cartas[i].contador==4){
+                    gameover=true
+                }
+            }
+
+            if (gameover==true){
+                document.write("La persona obtuvo 4 figuras iguales.")
+                break
+            }
+            document.write("<br>")
+        }
+
+        if (iteracion<10){
+            document.write(" Lo hiciste en menos de 10 oportunidades, estas de suerte, has ganado 1000 dolares :) ")
+        }
+    </script>
+</body>
+</html>

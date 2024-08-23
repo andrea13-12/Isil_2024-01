@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body> 
+    <h4>
+        Se le pide al usuario ingresar un numero del  1 al 7, y cada uno de ellos representa un dia de la semana. Mostrar la comida de ese dia y el precio del plato.
+    </h4>    
+    <script> 
+        var  dia, 
+
+        dia= parseInt(prompt("Ingrese un dia de la semana"))
+
+        switch (dia){ /* es una expreison*/
+            case 1: /*Tmb puede ser un string*/
+                document.write("Hoy dia lunes se prepara Lentejitas y el valor es 7 soles")
+            break;
+            case 2:
+                document.write("Hoy dia Martes se prepara estofado y el valor es 10 soles")
+            break;
+            case 3:
+                document.write("Hoy dia Miercoles se prepara causa de atun y el valor es 9 soles")
+            break;
+            case 4:
+                document.write("Hoy dia Jueves se prepara pavita y el valor es 13 soles")
+            break;
+            case 5:
+                document.write("Hoy dia es viernes se prepara fideos en salsa de langostinos y el valor es de 35 soles")
+            break;
+            case 6:
+                document.write("Hoy dia es Sabado se prepara risotto con picaña y el valor es de 40 soles")
+            break;
+            case 7:
+                document.write("Hoy dia es Domingo se prepara Makis acevichado y el valor es 30 soles")
+            break;
+            default:
+                document.write("No es un dia de la semana") 
+            break;
+        }
+    </script>
+</body>
+</html>

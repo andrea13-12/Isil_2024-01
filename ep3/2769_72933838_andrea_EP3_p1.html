@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h3>
+        Con el nombre que el usuario ingrese formar lo siguiente:
+              O
+              D
+              E
+              R
+              F
+              L
+        ODERFLALFREDO
+              L
+              F
+              R
+              E
+              D
+              O
+    </h3>
+    <script>
+        var name
+
+        name= prompt("Please insert your name").toUpperCase()
+
+        function printName(name) {
+            const reversed = name.split('').reverse().join('');
+            const length = name.length;
+
+            for (let i = 0; i < length - 1; i++) {
+                document.write("&nbsp&nbsp&nbsp".repeat(length-2) + reversed[i]);
+                document.write("<br>")
+            }
+
+            document.write(reversed + name.substring(1));
+            document.write("<br>")
+
+
+            for (let i = 1; i < length; i++) { // Start from 1 to avoid duplicating the first character
+                document.write("&nbsp&nbsp&nbsp".repeat(length - 2) + name[i]);
+                document.write("<br>")
+
+            }
+        }
+
+        printName(name);
+    </script>
+</body>
+</html>
+

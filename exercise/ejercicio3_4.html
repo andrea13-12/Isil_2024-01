@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body> 
+    <h4>
+        Se le pide al usuario ingresar un numero de 3 cifras y a la vez que sea multiplo de 7, el programa te mostrara la division con 7 si cumple o te mostrara el numero ingresado no es de 3 cifras.
+    </h4>    
+    <script>
+        var num1 
+
+        num1= parseInt(prompt("Ingrese un numero multiplo de 7 y de tres cifras"))
+
+        if ((num1>999) || (num1<100)) {
+            document.write("El numero tiene mas de 3 cifras")
+        } else {
+            if (num1%7>0){
+                document.write("El numero ingresado no es multiplo de 7")
+            }
+            else{
+                document.write("El numero ingresado es: "+num1+" y su division con 7 es: "+num1/7)
+            }
+        }
+    </script>
+</body>
+</html>

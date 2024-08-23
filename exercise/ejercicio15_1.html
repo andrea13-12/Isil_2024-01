@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio12_3</title>
+
+</head>
+<body>
+    <h4>
+        Edificio, desarrollar una app 
+    </h4>
+    <script>
+        var pisos, habitaciones, color, luces, contadorL
+
+        contadorL=0
+
+        pisos= parseInt(prompt("Ingrese el numero de pisos"))
+        habitaciones= parseInt(prompt("Ingrese el numero de habitaciones"))
+        luces = parseInt(prompt("Ingrese el numero de luces prendidas"))
+
+        for(var p=1; p<=pisos; p++){
+            for(var h=1; h<=habitaciones; h++){
+                color= parseInt(Math.random()*10+1) //El 10 son las probabilidades de luces prendidas
+                if (contadorL>=luces){
+                    document.write=("▣")
+                }else{
+                    if (color==1){
+                        document.write("▣".fontcolor("yellow"))
+                        contadorL++
+                    }else{
+                        document.write("▣")
+                    }
+                }
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>
+

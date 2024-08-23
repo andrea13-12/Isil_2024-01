@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1_5</title>
+</head>
+<body>
+    <h4>
+        Se le pide a un desarrollador crear un programa que te pida 2 numeros y tu debes mostrar la suma, la diferencia y la multiplicacion de estos. Arme correctamente el mensaje de muestra.
+    </h4>
+    <script>
+        var val1, val2, suma, multi, resta
+        val1= parseInt(prompt("Ingrese el primer valor")) /*Solo números enteros*/
+        val2= parseFloat(prompt("Ingrese el segundo valor")) /*Acepta decimales*/
+        
+        suma= val1+val2
+        resta= val1-val2
+        multi=val1*val2
+
+        document.write("La suma de los números es: "+suma+"<br>")
+        document.write("La resta de los números es: "+resta+"<br>")
+        document.write("La multiplicación de los números es: "+multi+"<br>")
+
+     </script>
+</body>
+</html>
